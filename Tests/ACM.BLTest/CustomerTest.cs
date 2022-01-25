@@ -16,7 +16,7 @@ namespace ACM.BLTest
                 FirstName = "Abel",
                 LastName = "Tadesse"
             };
-            string expected = "Abel, Tadesse";
+            string expected = "Tadesse, Abel";
 
 
             //--Act
@@ -26,5 +26,38 @@ namespace ACM.BLTest
             Assert.AreEqual(expected, actual); 
 
         }
+        [TestMethod]
+        public void FullNameLastNameEmpity()
+        {
+            //--Arrage
+            Customer customer = new Customer
+            {
+                FirstName = "Abel"
+            };
+            string expected = "Abel";
+
+            //--Act
+            string actual = customer.FullName;
+            //--Assert
+            Assert.AreEqual(expected, actual);
+
+        }
+        [TestMethod]
+        public void StaticTest()
+        {
+            // -- Arrage
+            var c1 = new Customer();
+            c1.FirstName = "Bilbo";
+            Customer.Instancecount += 1;
+
+            var c2 = new Customer();
+            c2.FirstName = "Frado";
+            Customer.Instancecount += 1;
+
+            //-- Act
+            //--Assert
+            Assert.AreEqual(2, Customer.Instancecount);
+        }
     }
+    
 }
