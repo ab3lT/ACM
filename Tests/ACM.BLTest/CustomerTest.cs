@@ -58,6 +58,53 @@ namespace ACM.BLTest
             //--Assert
             Assert.AreEqual(2, Customer.Instancecount);
         }
+        [TestMethod]
+        public void CheekEmail()
+        {
+            Customer customer = new Customer
+            {
+                EmailAdress = "123@test.com"
+            };
+            string expected = "123@test.com";
+
+            //--Act
+            string actual = customer.EmailAdress;
+            //--Assert
+            Assert.AreEqual(expected, actual);
+
+        }
+        [TestMethod]
+        public void ValidateValid()
+        {
+            //-- Arrange
+            var Customer = new Customer
+            {
+                LastName = "Tadesse",
+                EmailAdress = "Tadesse@123.com"
+            };
+            var expected = true;
+            //-- Act
+            var actual = Customer.Validate();
+
+            // -- Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void ValidateMissingLastName()
+        {
+            //-- Arrange
+            var Customer = new Customer
+            {
+                
+                EmailAdress = "Tadesse@123.com"
+            };
+            var expected = false;
+            //-- Act
+            var actual = Customer.Validate();
+
+            // -- Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
     
 }
