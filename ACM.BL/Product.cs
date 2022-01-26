@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    class Product
+    public class Product
     {
         public Product()
         {
@@ -31,14 +31,14 @@ namespace ACM.BL
         /// <summary>
         /// Retrive one customer.
         /// </summary>
-        public Product Retrieve(string ProduceId)
-        {
-            // code that retrives the definded produce.
-            return new Product();
-        }
-        /// <summary>
-        /// Retrive all produce.
-        /// </summary>
+        //public Product Retrieve(string ProduceId)
+        //{
+        //    // code that retrives the definded produce.
+        //    return new Product();
+        //}
+        ///// <summary>
+        ///// Retrive all produce.
+        ///// </summary>
         public List<Product> products()
         {
             // code that retrives the definded customer.
@@ -48,10 +48,10 @@ namespace ACM.BL
         /// Saves the current product
         /// </summary>
         /// <returns></returns>
-        public bool Save()
-        {
-            // vode that saves the defined product
-            return true;
-        }
+        //public bool Save()
+        //{
+        //    // vode that saves the defined product
+        //    return true;
+        //}
     }
 }

@@ -16,7 +16,7 @@ namespace ACM.BL
         {
             OrderId = orderId;
         }
-        public DateTimeOffset? OrderDate { get; set; }
+        public DateTimeOffset? OrderDate  { get; set; }
         public int OrderId { get; set; }
         ///<summary>
         ///Retrive one order.

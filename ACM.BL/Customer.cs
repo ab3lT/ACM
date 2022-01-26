@@ -63,11 +63,7 @@ namespace ACM.BL
         /// <summary>
         /// Retrive one customer.
         /// </summary>
-        public Customer Retrieve(int customerId)
-        {
-            // code that retrives the definded customer.
-            return new Customer();
-        }
+       
         /// <summary>
         /// Retrive all customer.
         /// </summary>
@@ -80,10 +76,6 @@ namespace ACM.BL
         /// Saves the current customer
         /// </summary>
         /// <returns></returns>
-        public bool Save()
-        {
-            // vode that saves the defined customer
-            return true;
-        }
+     
     }
 }
