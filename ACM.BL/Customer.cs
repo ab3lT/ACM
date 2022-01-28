@@ -20,6 +20,7 @@ namespace ACM.BL
        
         public string EmailAdress { get; set; }
         public string FirstName { get; set; }
+
         
         public string FullName
         {

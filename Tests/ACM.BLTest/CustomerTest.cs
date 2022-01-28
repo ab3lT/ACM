@@ -11,11 +11,14 @@ namespace ACM.BLTest
         public void FullNameTestValid()
         {
             //Arraange
-            Customer customer = new Customer
-            {
-                FirstName = "Abel",
-                LastName = "Tadesse"
-            };
+            //Customer customer = new Customer
+            //{
+            //    FirstName = "Abel",
+            //    LastName = "Tadesse"
+            //};
+            Customer customer = new Customer();
+            customer.FirstName = "Abel";
+            customer.LastName = "Tadesse";
             string expected = "Tadesse, Abel";
 
 
